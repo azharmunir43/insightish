@@ -1,0 +1,54 @@
+.main-container {
+    text-align: center;
+}
+.wrapper {
+    font-family: "Helvetica";
+}
+
+.main-panel label > span {
+    float: left;
+    width: 200px;
+    text-align: right;
+    margin: 10px;
+}
+
+.main-heading {
+    text-align: center;
+    font-family: "Times New Roman";
+}
+
+.main-panel fieldset {
+    border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+}
+
+.main-panel fieldset legend {
+    border-radius: 5px 5px 0px 0px;
+    padding: 0px 8px 3px 8px;
+    font-weight: normal;
+}
+
+.main-panel input[type=text] {
+    float: right;
+    margin: 5px;
+    border-radius: 3px;
+    padding: 5px 8px 5px 8px;
+}
+
+.main-panel select {
+    float: left;
+    margin: 5px;
+    border-radius: 3px;
+    padding: 5px 8px 5px 8px;
+}
+
+.main-panel input[type=submit] {
+    padding: 5px 15px 5px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: inline-block;
+}

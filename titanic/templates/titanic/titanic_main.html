@@ -1,0 +1,84 @@
+{% load static %}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'titanic/titanic_main.css' %}"/>
+    <title>Titanic Survival Prediction</title>
+
+</head>
+<body>
+<div class="main-container">
+    <div class="wrapper">
+
+        <h1 class='main-heading'>Titanic Survival Prediction</h1>
+
+        <div class="main-panel">
+            <form action="{% url 'titanic:titanic_result' %}" method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="Name"><span>Name </span><input type="text" class="input-field"
+                                                               name="Name"/></label>
+                    <br>
+                    <label for="Age"><span>Age </span><input type="text" class="input-field"
+                                                             name="Age"/></label>
+                    <br>
+                    <label for="SibSp"><span>Siblings & Spouse Count </span><input type="text"
+                                                                                   class="input-field"
+                                                                                   name="SibSp"/></label>
+                    <br>
+                    <label for="Parch"><span>Parent & Children Count</span> <input type="text"
+                                                                                   class="input-field"
+                                                                                   name="Parch"/></label>
+                    <br>
+
+
+                    <label for="Sex">
+                        <span>Gender</span>
+                        <select name="Sex">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Travel Information</legend>
+                    <label for="Ticket"><span>Ticket Number</span><input type="text"
+                                                                         name="Ticket"/></label>
+                    <br>
+                    <label for="Pclass"><span>Passenger Class</span>
+                        <select name="Pclass">
+                            <option value="1">First</option>
+                            <option value="2">Second</option>
+                            <option value="3">Third</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label for="Cabin"><span>Cabin Number </span><input type="text"
+                                                                        name="Cabin"/></label>
+                    <br>
+                    <label for="Fare"><span>Fare </span><input type="text" name="Fare"/></label>
+                    <br>
+                    <label for="Embarked"><span>Port of Embarkation</span>
+                        <select name="Embarked">
+                            <option value="C">Cherbourg</option>
+                            <option value="Q">Queenstown</option>
+                            <option value="S">Southampton</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <input type="submit" value="Predict"/>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
